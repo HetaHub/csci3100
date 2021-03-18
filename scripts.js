@@ -27,3 +27,12 @@ function gotoPage(name) {
 	}
 	document.getElementById(name).style.display = "block";
 }
+
+function leaderboard(id) {
+	if (document.getElementById("leaderboard") === "block") {
+		
+	}
+	else {
+		gotoPage("leaderboard");
+	}
+}
