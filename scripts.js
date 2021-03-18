@@ -25,4 +25,5 @@ function gotoPage(name) {
 	for (i = 0; i < pages.length; i++) {
 		pages[i].style.display = "none";
 	}
+	document.getElementById(name).style.display = "block";
 }
