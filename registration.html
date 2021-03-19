@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="regisscrip.js" defer></script>
+</head>
+<body>
+    <h1>Registration</h1>
+    <body>
+        <form id= "login" @submit.prevent="processForm">
+            <label for="username" class="label">Please enter an username</label>
+            <input id= "username" type="text" name="username" class="input" v-model="username">
+            <br>
+            <label for="password" class="label">Please enter a password</label>
+            <input id= "password" type="password" name="password" class="input" v-model="password">
+            <br>
+            <label for="password" class="label">Please reenter password</label>
+            <input id= "repassword" type="password" name="repassword" class="input" v-model="repassword">
+            <br>
+            <button type="submit" class="submit">login</button>
+        </form>
+</body>
+</html>
