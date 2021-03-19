@@ -16,24 +16,54 @@ var CardTypes = [
     },
     {
       name: "school of architechture",
-      image: "https://lh3.googleusercontent.com/proxy/5qgHyGCYnQ3DPLAtp4ZqFp8JI-v2SWiuQFnFSHoV3lffmxkLuYQSbEDeAHmjGeAgqfetGh46KwRPN28O6_pi8h5DdaarYhW8os_yvMYa8RHENN_i-udT",
+      image: "https://lh3.googleusercontent.com/proxy/BwFCviGeRrM4lXRhB6dL4Puuvqa9PKZfqCHgbfYf_PEh6FKAIfzS3E-W_YA1XK1_q5NBO-HXMcAVLF3uZqtxSiXYudkmQZqivPKc6mcLu1uza8nQaptb",
       info: "soa"
     },
     {
       name: "sui loong pao building",
-      image: "https://lh3.googleusercontent.com/proxy/rDLWB3ST38hgLFt2ttYGQ7FGnoSHyGGbh_GP9-129rSOS5K5B10TZoVuyBG5uOEpQykt4wcwfHqrR32HhSzJzHU9XjusHmiOvrUT02eIoOT09T01Vpl3-G2w5sCkyRgKuIoFwebfgOdRB4nWFrCnYABfS97utjZBob0",
+      image: "https://lh3.googleusercontent.com/proxy/ztl_qVZdI_zpuSr-ODJHevNuQw9HJlbusysh1OReqtWVsmoJPDFipBH7MXJqI-VhJLe28K6VRrOFWh4HYQN6c5JFFYI_jBeLrUrPTo09fdT8BhPsgrpStU_30Kph1qjXarclr2SyHJfLyH9rkv3p4Ji-ZwBR4kWIkQc",
       info: "slpb"
     },
     {
       name: "lks medical science building",
       image: "https://www.med.cuhk.edu.hk/f/facilities/51/1024p638/5a39e98d3f42d.jpg",
       info: "lks"
+    },
+	{
+      name: "Science Laboratory Building",
+      image: "https://i.imgur.com/7hNSltW.png",
+      info: "slb"
+    },
+	{
+      name: "milestones",
+      image: "https://i.imgur.com/0Pb3aJD.png",
+      info: "m"
+    },
+    {
+      name: "lib",
+      image: "https://i.imgur.com/2XFXRmL.png",
+      info: "l"
+    },
+    {
+      name: "school of architechture",
+      image: "https://i.imgur.com/OXmx2zV.png",
+      info: "soa"
+    },
+    {
+      name: "sui loong pao building",
+      image: "https://i.imgur.com/kZDMeoR.png",
+      info: "slpb"
+    },
+    {
+      name: "lks medical science building",
+      image: "https://i.imgur.com/stojzUi.png",
+      info: "lks"
     }
   ];
   
   var shuffleCards = function shuffleCards() {
 	var cards;
-    cards = [].concat(_.cloneDeep(CardTypes), _.cloneDeep(CardTypes));
+    cards = [].concat(_.cloneDeep(CardTypes));
     return _.shuffle(cards);
   };
   
@@ -115,7 +145,7 @@ var CardTypes = [
   
       updateScore: function updateScore() {
         var elapsedTime = moment().diff(this.startTime, 'seconds')
-        var score = 1000 - elapsedTime * 2 - this.turns * 10
+        var score = 2000 - elapsedTime * 5 - this.turns * 20
         this.score = Math.max(score, 0)
       },
   
