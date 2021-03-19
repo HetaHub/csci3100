@@ -13,13 +13,13 @@ function activateBar(id) {
 			x[i].style.display = "none";
 			y[i].classList.remove("active");
 		}
-		x[4].style.display = "none";
+		x[3].style.display = "none";
 		x[id].style.display = "block";
 		y[id].classList.add("active");
 	} else {
 		x[id].style.display = "none";
 		y[id].classList.remove("active")
-		x[4].style.display = "block";
+		x[3].style.display = "block";
 	}
 }
 
