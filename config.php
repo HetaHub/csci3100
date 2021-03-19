@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost"; 
-$user = "root"; 
-$password = ""; 
-$dbname = "user"; 
+$host = "csci3100server.database.windows.net"; 
+$user = "csci3100admin"; 
+$password = "Csci3100pw"; 
+$dbname = "users"; 
 
 $con = mysqli_connect($host, $user, $password,$dbname);
 if (!$con) {
