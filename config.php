@@ -1,7 +1,7 @@
 <?php
 
 $host = "csci3100server.database.windows.net"; 
-$user = "csci3100admin"; 
+$user = "csci3100guest"; 
 $password = "Csci3100pw"; 
 $dbname = "csci3100db"; 
 
