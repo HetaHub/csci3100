@@ -26,14 +26,14 @@ var login= new Vue({
         }
     }
 })
-var registration= new Vue({
+/*var registration= new Vue({
     el: "#registration",
     methods: {
         register: function(){
             window.location.href = "registration.html";
         }
     }
-})
+})*/
 var rguest= new Vue({
     el: "#guest",
     methods: {
