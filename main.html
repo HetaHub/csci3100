@@ -89,8 +89,10 @@
    <form id= "login" @submit.prevent="record">
        <label for="username" class="label">username</label>
        <input id= "username" type="text" name="username" class="input" v-model="username">
+	<br>
        <label for="password" class="label">password</label>
        <input id= "password" type="password" name="password" class="input" v-model="password">
+	<br>
        <button type="submit" class="submit">login</button>
    </form>
    <button id="guest" @click="guest">Login as Guest</button>
