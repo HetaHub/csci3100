@@ -6,7 +6,7 @@ if($_GET['function']=="login"){
     if(isset($_GET['username']) && isset($_GET['password'])){
         $condition = " UserName=".$_GET['username']."AND Password=".$_GET['password'];
     }
-    $userData = mysqli_query($con,"select * from csci3100db WHERE ".$condition);
+    $userData = mysqli_query($con,"select * from users WHERE ".$condition);
 
     $response = array();
 
@@ -18,7 +18,7 @@ if($_GET['function']=="login"){
     if(isset($_GET['username']) && isset($_GET['password'])){
         $condition = "(".$_GET['username'].", ".$_GET['password'].")";
     }
-    $userData = mysqli_query($con,"insert into csci3100db (UserName, Password) values ".$condition);
+    $userData = mysqli_query($con,"insert into users (UserName, Password) values ".$condition);
 }
 
 echo json_encode($response);
