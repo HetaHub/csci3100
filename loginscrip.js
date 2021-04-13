@@ -26,14 +26,30 @@ var login= new Vue({
         }
     }
 })
-/*var registration= new Vue({
-    el: "#registration",
+
+var registration= new Vue({
+    el: '#register',
+    data: {
+        username: '',
+        password: '',
+        repassword: ''
+    },
     methods: {
-        register: function(){
-            window.location.href = "registration.html";
+        record: function(){
+            axios.get('ajaxfile.php', {
+                params: {
+                  function: "register",
+                  username: this.username,
+                  password: this.password
+                }
+             })
+             .catch(function (error) {
+                console.log(error);
+             });
         }
     }
-})*/
+})
+
 var rguest= new Vue({
     el: "#guest",
     methods: {
