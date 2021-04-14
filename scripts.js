@@ -1,4 +1,5 @@
 function activateBar(id) {
+	document.cookie = "username=test";
 	var x = Array(3); 
 	//x[0] = document.getElementById("gameBar");
 	x[0] = document.getElementById("accountBar")
