@@ -1,4 +1,4 @@
-var login= new Vue({
+var register= new Vue({
     el: '#register',
     data: {
         username: '',
