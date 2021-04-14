@@ -14,11 +14,22 @@ var login= new Vue({
             }
             else{
                 //store into databas
-                this.record(this.username, this.password);
+                //this.record(this.username, this.password);
+                axios.get('ajaxfile.php', {
+                    params: {
+                      func: "register",
+                      username: this.username,
+                      password: this.password
+                    }
+                 })
+                 .catch(function (error) {
+                    console.log(error);
+                 });
+                
                 window.location.href = "main.html";
             }
         },
-        record: function(){
+        /*record: function(){
             axios.get('ajaxfile.php', {
                 params: {
                   function: "register",
@@ -29,6 +40,6 @@ var login= new Vue({
              .catch(function (error) {
                 console.log(error);
              });
-        }
+        }*/
     }
 })
