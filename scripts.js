@@ -56,3 +56,6 @@ function getCookie(cname) {
   return "";
 }
 
+function accountInfo() {
+	document.getElementById("account").innerHTML = "Currently not logged in";
+}
