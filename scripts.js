@@ -31,6 +31,7 @@ function gotoPage(name) {
 	document.getElementById(name).style.display = "block";
 }
 
+/*
 function leaderboard(id) {
 	if (document.getElementById("leaderboard") === "block") {
 		
@@ -39,6 +40,7 @@ function leaderboard(id) {
 		gotoPage("leaderboard");
 	}
 }
+*/
 
 function getCookie(cname) {
   var name = cname + "=";
