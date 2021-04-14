@@ -165,7 +165,9 @@
 	    </tr>
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", 'users');
-		    
+		    if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		    }
 		    $sql = "SELECT TOP 10 * FROM users ORDER BY TotalScore";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
@@ -190,7 +192,9 @@
 	    </tr>
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", 'users');
-
+		    if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		    }
 		    
 		    $sql = "SELECT TOP 10 * FROM users ORDER BY MaxScore";
 		    $result = $conn->query($sql);
@@ -217,7 +221,9 @@
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", 'users');
 
-		    
+		    if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		    }
 		    $sql = "SELECT TOP 10 * FROM users ORDER BY PlayCount";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
