@@ -62,6 +62,10 @@ function accountInfo() {
 		document.getElementById("account").innerHTML = "Currently not logged in";
 	}
 	else {
-		document.getElementById("account").innerHTML = "Logged in as user: " + accountCookie;
+		document.getElementById("account").innerHTML = "Logged in as user: " + accountCookie + "<br><button @click="javascript:logout()">Logout</button>";
 	}
+}
+
+function logout()
+	document.cookie = "username=;expires=Thu, 01 Jan 1970 00:00:00 UTC"
 }
