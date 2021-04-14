@@ -57,5 +57,11 @@ function getCookie(cname) {
 }
 
 function accountInfo() {
-	document.getElementById("account").innerHTML = "Currently not logged in";
+	var accountCookie = getCookie(username);
+	if (accountCookie == "") {
+		document.getElementById("account").innerHTML = "Currently not logged in";
+	}
+	else {
+		document.getElementById("account").innerHTML = "Logged in as user: " + accountCookie;
+	}
 }
