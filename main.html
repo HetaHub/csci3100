@@ -158,8 +158,8 @@
 	<h1>comments</h1>
     <body>
         <form id= "comment" @submit.prevent="processForm">
-            <textarea rows="4" cols="50" name="comment" form="comment" v-model="comment">
-            Comment here...</textarea>
+            <textarea rows="4" cols="50" name="comment" form="comment" v-model="comment" placeholder="Comment here...">
+            </textarea>
             <button type="submit" class="submit">submit</button>
         </form>
     </body>
