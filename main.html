@@ -171,14 +171,14 @@
 	    </tr>
 	    <?php
 	    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
-	    // Check connection
+
 	    if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	    }
-	    $sql = "SELECT TOP 10 * FROM USERS ORDER BY TotalScore";
+	    $sql = "SELECT TOP 10 * FROM users ORDER BY TotalScore";
 	    $result = $conn->query($sql);
 	    if ($result->num_rows > 0) {
-	    // output data of each row
+
 	    while($row = $result->fetch_assoc()) {
 	    echo "</td><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
 	    }
