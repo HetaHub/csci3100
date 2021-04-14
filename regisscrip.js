@@ -10,7 +10,7 @@ var register= new Vue({
             if(this.password!=this.repassword){
                 alert("password confirmation failed");
                 Console.log("hi");
-                window.location.href = "main.html";
+                window.location.href = "main.php";
             }
             else{
                 //store into databas
@@ -26,7 +26,7 @@ var register= new Vue({
                     console.log(error);
                  });
                 
-                window.location.href = "main.html";
+                window.location.href = "main.php";
             }
         },
         /*record: function(){
