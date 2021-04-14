@@ -57,9 +57,9 @@
 <div id = "leaderboardBar" style = "display:none">
 <nav class = "navbar navbar-expand navbar-dark mb-3" style = "background-color:rgb(32,32,32)">
 	<ul class = "navbar-nav">
-		<li class = "nav-item"><a href = "javascript:leaderboard(0)" class = "nav-link">Total Score</a></li>
-		<li class = "nav-item"><a href = "javascript:leaderboard(1)" class = "nav-link">Max Score</a></li>
-		<li class = "nav-item"><a href = "javascript:leaderboard(2)" class = "nav-link">Play Count</a></li>
+		<li class = "nav-item"><a href = "javascript:gotoPage('leaderboard1')" class = "nav-link">Total Score</a></li>
+		<li class = "nav-item"><a href = "javascript:gotoPage('leaderboard2')" class = "nav-link">Max Score</a></li>
+		<li class = "nav-item"><a href = "javascript:gotoPage('leaderboard3')" class = "nav-link">Play Count</a></li>
 	</ul>
 </nav>
 </div>
@@ -160,7 +160,67 @@
 	</ul>
 </div>
 
-<div id = "leaderboard" class = "page" style = "display:none">
+<div id = "leaderboard1" class = "page" style = "display:none">
+	<h1>leaderboard</h1>
+	<?php
+	    <table>
+	    <tr>
+	    //<th>Id</th>
+	    <th>Username</th>
+	    <th>Score</th>
+	    </tr>
+	    <?php
+	    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
+
+	    if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	    }
+	    $sql = "SELECT TOP 10 * FROM users ORDER BY TotalScore";
+	    $result = $conn->query($sql);
+	    if ($result->num_rows > 0) {
+
+	    while($row = $result->fetch_assoc()) {
+	    echo "</td><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
+	    }
+	    echo "</table>";
+	    } else { echo "0 results"; }
+	    $conn->close();
+	    ?>
+	    </table>
+	?>
+</div>
+			
+<div id = "leaderboard2" class = "page" style = "display:none">
+	<h1>leaderboard</h1>
+	<?php
+	    <table>
+	    <tr>
+	    //<th>Id</th>
+	    <th>Username</th>
+	    <th>Score</th>
+	    </tr>
+	    <?php
+	    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
+
+	    if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	    }
+	    $sql = "SELECT TOP 10 * FROM users ORDER BY TotalScore";
+	    $result = $conn->query($sql);
+	    if ($result->num_rows > 0) {
+
+	    while($row = $result->fetch_assoc()) {
+	    echo "</td><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
+	    }
+	    echo "</table>";
+	    } else { echo "0 results"; }
+	    $conn->close();
+	    ?>
+	    </table>
+	?>
+</div>
+			
+<div id = "leaderboard3" class = "page" style = "display:none">
 	<h1>leaderboard</h1>
 	<?php
 	    <table>
