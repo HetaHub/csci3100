@@ -1,8 +1,8 @@
 <?php
 
 $host = "localhost"; 
-$user = "csci3100admin"; 
-$password = "Csci3100vmpw"; 
+$user = "root"; 
+$password = ""; 
 #<<<<<<< HEAD
 //$dbname = "Csci3100db";
 //=======
