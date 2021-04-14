@@ -168,7 +168,7 @@
 		    if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		    }
-		    $sql = "SELECT TOP 10 * FROM users ORDER BY TotalScore";
+		    $sql = "SELECT * FROM users ORDER BY TotalScore ASC LIMIT 10";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
@@ -196,7 +196,7 @@
 			die("Connection failed: " . $conn->connect_error);
 		    }
 		    
-		    $sql = "SELECT TOP 10 * FROM users ORDER BY MaxScore";
+		    $sql = "SELECT * FROM users ORDER BY MaxScore ASC LIMIT 10";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
@@ -224,7 +224,7 @@
 		    if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		    }
-		    $sql = "SELECT TOP 10 * FROM users ORDER BY PlayCount";
+		    $sql = "SELECT * FROM users ORDER BY PlayCount ASC LIMIT 10";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
