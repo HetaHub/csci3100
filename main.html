@@ -156,12 +156,12 @@
 </div>
 
 <div id = "leaderboard1" class = "page" style = "display:none">
-	<h1>leaderboard</h1>
+	<h1>Leaderboard</h1>
 	
 	    <table>
 	    <tr>
 	    <th>Username</th>
-	    <th>Total Score</th>
+	    <th>Score</th>
 	    </tr>
 	    <?php
 		    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
@@ -181,12 +181,12 @@
 </div>
 			
 <div id = "leaderboard2" class = "page" style = "display:none">
-	<h1>leaderboard</h1>
+	<h1>Leaderboard</h1>
 	
 	    <table>
 	    <tr>
 	    <th>Username</th>
-	    <th>Max Score</th>
+	    <th>Score</th>
 	    </tr>
 	    <?php
 		    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
@@ -207,12 +207,12 @@
 </div>
 			
 <div id = "leaderboard3" class = "page" style = "display:none">
-	<h1>leaderboard</h1>
+	<h1>Leaderboard</h1>
 	
 	    <table>
 	    <tr>
 	    <th>Username</th>
-	    <th>Play Count</th>
+	    <th>Score</th>
 	    </tr>
 	    <?php
 		    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
@@ -240,6 +240,30 @@
             </textarea>
             <button type="submit" class="submit">submit</button>
         </form>
+	    
+	    <table>
+	    <tr>
+	    <th>Recent Comments</th>
+	    </tr>
+	    <?php
+		    $conn = new mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "COMMENT");
+		    
+		    if ($mysqli -> connect_errno) {
+			  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+			  exit();
+			}
+		    
+		    $sql = "SELECT TOP 10 * FROM COMMENT";
+		    $result = $conn->query($sql);
+		    if ($result->num_rows > 0) {
+			    while($row = $result->fetch_assoc()) {
+				echo "</td><td>". $row["com"]. "</td></tr>";
+			    }
+			    echo "</table>";
+		    } else { echo "0 results"; }
+		    $conn->close();
+	    ?>
+	    </table>
     </body>
 </div>
 
