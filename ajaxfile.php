@@ -6,7 +6,7 @@ if($_GET['func']=="login"){
     if(isset($_GET['username']) && isset($_GET['password'])){
         $condition = " UserName=".$_GET['username']."AND Password=".$_GET['password'];
     }
-    $userData = mysqli_query($con,"select * from users WHERE ".$condition);
+    $userData = mysqli_query($con,"SELECT * from users WHERE ".$condition);
 
     $response = array();
 
@@ -18,12 +18,12 @@ if($_GET['func']=="login"){
     if(isset($_GET['username']) && isset($_GET['password'])){
         $condition = "(".$_GET['username'].", ".$_GET['password'].")";
     }
-    $userData = mysqli_query($con,"insert into users (UserName, Password) values ".$condition);
+    $userData = mysqli_query($con,"INSERT INTO users (UserName, Password) VALUES ".$condition);
 }else if ($_GET['func']=="comment"){
     if(isset($_GET['comment'])){
         $condition = "(".$_GET['password'].")";
     }
-    $userData = mysqli_query($con,"insert into users (comments) values ".$condition);
+    $userData = mysqli_query($con,"INSERT INTO users (comments) VALUES ".$condition);
 }
 
 echo json_encode($response);
