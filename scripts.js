@@ -29,6 +29,7 @@ function gotoPage(name) {
 		pages[i].style.display = "none";
 	}
 	document.getElementById(name).style.display = "block";
+	accountInfo();
 }
 
 /*
