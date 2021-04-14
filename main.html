@@ -139,11 +139,11 @@
     <h1>Registration</h1>
     <body>
         <form id= "register" @submit.prevent="processForm">
-            <input id= "username" type="text" name="username" class="input" v-model="username" placeholder="Username">
+            <input name="username" type="text" required="required" class="input" id= "username" placeholder="Username" v-model="username">
             <br>
-            <input id= "password" type="password" name="password" class="input" v-model="password" placeholder="Password">
+            <input name="password" type="password" required="required" class="input" id= "password" placeholder="Password" v-model="password">
             <br>
-            <input id= "repassword" type="password" name="repassword" class="input" v-model="repassword" placeholder="Confirm Password">
+            <input name="repassword" type="password" required="required" class="input" id= "repassword" placeholder="Confirm Password" v-model="repassword">
             <br>
             <button type="submit" class="submit">Register</button>
         </form>
