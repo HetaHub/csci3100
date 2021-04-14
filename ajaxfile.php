@@ -23,7 +23,7 @@ if($_GET['func']=="login"){
     if(isset($_GET['comment'])){
         $condition = "(".$_GET['password'].")";
     }
-    $userData = mysqli_query($con,"INSERT INTO Comments (comments) VALUES ".$condition);
+    $userData = mysqli_query($con,"INSERT INTO comments (comments) VALUES ".$condition);
 }
 
 echo json_encode($response);
