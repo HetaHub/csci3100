@@ -246,7 +246,7 @@
 	    <th>Recent Comments</th>
 	    </tr>
 	    <?php
-		    $conn = new mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "COMMENT");
+		    $conn = mysqli("localhost", "csci3100admin", "Csci3100vmpw", "COMMENT");
 		    
 		    if ($mysqli -> connect_errno) {
 			  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
