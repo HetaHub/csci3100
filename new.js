@@ -15,7 +15,7 @@ var login= new Vue({
                 console.log(error);
              });
             
-            window.location.href = "main.html";
+            window.location.href = "main.php";
         }
     }
 })
