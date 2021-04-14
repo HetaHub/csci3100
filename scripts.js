@@ -1,6 +1,4 @@
 function activateBar(id) {
-	document.cookie = "username=test";
-	accountInfo();
 	var x = Array(3); 
 	//x[0] = document.getElementById("gameBar");
 	x[0] = document.getElementById("accountBar")
@@ -59,7 +57,7 @@ function getCookie(cname) {
 }
 
 function accountInfo() {
-	var accountCookie = getCookie(username);
+	var accountCookie = getCookie("username");
 	if (accountCookie == "") {
 		document.getElementById("account").innerHTML = "Currently not logged in";
 	}
