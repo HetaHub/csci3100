@@ -4,7 +4,7 @@ function activateBar(id) {
 	x[0] = document.getElementById("accountBar")
 	x[1] = document.getElementById("leaderboardBar");
 	x[2] = document.getElementById("emptyBar");
-	var y = Array(3); 
+	var y = Array(2); 
 	//y[0] = document.getElementById("gameBarButton");
 	y[0] = document.getElementById("accountBarButton");
 	y[1] = document.getElementById("leaderboardBarButton");
