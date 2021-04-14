@@ -170,7 +170,7 @@
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
-			    	echo "</td><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
+			    	echo "<tr><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
@@ -196,7 +196,7 @@
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
-			    	echo "</td><td>" . $row["UserName"] . "</td><td>". $row["MaxScore"]. "</td></tr>";
+			    	echo "<tr><td>" . $row["UserName"] . "</td><td>". $row["MaxScore"]. "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
@@ -222,7 +222,7 @@
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
-				echo "</td><td>" . $row["UserName"] . "</td><td>". $row["PlayCount"]. "</td></tr>";
+				echo "<tr><td>" . $row["UserName"] . "</td><td>". $row["PlayCount"]. "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
