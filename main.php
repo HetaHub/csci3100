@@ -244,7 +244,9 @@
 	    <table>
 	    <tr>
 	    <th>Recent Comments</th>
-	    </tr>
+
+		</tr>
+<!--
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", "COMMENT");
 		    
@@ -263,6 +265,7 @@
 		    } else { echo "0 results"; }
 		    $conn->close();
 	    ?>
+-->
 	    </table>
     </body>
 </div>
