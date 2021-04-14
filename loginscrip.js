@@ -19,6 +19,9 @@ var login= new Vue({
                     alert("Wrong username or password");
                     window.location.href = "main.php"
                 }
+                else {
+                    document.cookie = "username=" + this.username; 
+                }
              })
              .catch(function (error) {
                 console.log(error);
