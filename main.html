@@ -126,9 +126,9 @@
 <div id = "login" class = "page" style = "display:none">
    <h1>Login</h1>
    <form id= "login" @submit.prevent="record">
-       <input id= "username" type="text" name="username" class="input" v-model="username" placeholder="Username">
+       <input id= "username" type="text" required="required" name="username" class="input" v-model="username" placeholder="Username">
 	<br>
-       <input id= "password" type="password" name="password" class="input" v-model="password" placeholder="Password">
+       <input id= "password" type="password" required="required" name="password" class="input" v-model="password" placeholder="Password">
 	<br>
        <button type="submit" class="submit">login</button>
    </form>
