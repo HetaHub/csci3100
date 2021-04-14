@@ -16,12 +16,12 @@ var CardTypes = [
     },
     {
       name: "school of architechture",
-      image: "https://lh3.googleusercontent.com/proxy/BwFCviGeRrM4lXRhB6dL4Puuvqa9PKZfqCHgbfYf_PEh6FKAIfzS3E-W_YA1XK1_q5NBO-HXMcAVLF3uZqtxSiXYudkmQZqivPKc6mcLu1uza8nQaptb",
+      image: "https://i.imgur.com/eyXwyDy.png",
       info: "soa"
     },
     {
       name: "sui loong pao building",
-      image: "https://lh3.googleusercontent.com/proxy/ztl_qVZdI_zpuSr-ODJHevNuQw9HJlbusysh1OReqtWVsmoJPDFipBH7MXJqI-VhJLe28K6VRrOFWh4HYQN6c5JFFYI_jBeLrUrPTo09fdT8BhPsgrpStU_30Kph1qjXarclr2SyHJfLyH9rkv3p4Ji-ZwBR4kWIkQc",
+      image: "https://i.imgur.com/IZ4mfIk.png",
       info: "slpb"
     },
     {
