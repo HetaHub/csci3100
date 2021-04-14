@@ -161,7 +161,33 @@
 </div>
 
 <div id = "leaderboard" class = "page" style = "display:none">
-	<p>leaderboard</p>
+	<h1>leaderboard</h1>
+	<?php
+	    <table>
+	    <tr>
+	    //<th>Id</th>
+	    <th>Username</th>
+	    <th>Score</th>
+	    </tr>
+	    <?php
+	    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
+	    // Check connection
+	    if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	    }
+	    $sql = "SELECT TOP 10 * FROM USERS ORDER BY TotalScore";
+	    $result = $conn->query($sql);
+	    if ($result->num_rows > 0) {
+	    // output data of each row
+	    while($row = $result->fetch_assoc()) {
+	    echo "</td><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
+	    }
+	    echo "</table>";
+	    } else { echo "0 results"; }
+	    $conn->close();
+	    ?>
+	    </table>
+	?>
 </div>
 
 <div id = "comments" class = "page" style = "display:none">
