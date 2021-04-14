@@ -164,7 +164,7 @@
 	    <th>Score</th>
 	    </tr>
 	    <?php
-		    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
+		    $conn = mysqli_connect("localhost", "root", "", "users");
 		    
 		    $sql = "SELECT TOP 10 * FROM users ORDER BY TotalScore";
 		    $result = $conn->query($sql);
@@ -189,7 +189,7 @@
 	    <th>Score</th>
 	    </tr>
 	    <?php
-		    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
+		    $conn = mysqli_connect("localhost", "root", "", "users");
 
 		    
 		    $sql = "SELECT TOP 10 * FROM users ORDER BY MaxScore";
@@ -215,7 +215,7 @@
 	    <th>Score</th>
 	    </tr>
 	    <?php
-		    $conn = mysqli_connect("localhost", "csci3100admin", "Csci3100vmpw", "users");
+		    $conn = mysqli_connect("localhost", "root", "", "users");
 
 		    
 		    $sql = "SELECT TOP 10 * FROM users ORDER BY PlayCount";
