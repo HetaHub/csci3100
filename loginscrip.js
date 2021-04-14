@@ -28,7 +28,7 @@ var login= new Vue({
 })
 
 
-
+/*
 var rguest= new Vue({
     el: "#guest",
     methods: {
@@ -38,3 +38,4 @@ var rguest= new Vue({
         }
     }
 })
+*/
