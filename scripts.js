@@ -65,7 +65,7 @@ function accountInfo() {
 		document.getElementById("account").innerHTML = "Currently not logged in";
 	}
 	else {
-		document.getElementById("account").innerHTML = "<h1>Account Info</h1><ul><li>Username: " + accountCookie + "<\li> <li>Total Score:<\li><li>Max Score:<\li><li>Play Count:<\li></ul><button onClick='javascript:logout()'>Logout</button>";
+		document.getElementById("account").innerHTML = "<h1>Account Info</h1><p>Username: " + accountCookie + "<br>Total Score:<br>Max Score:<br>Play Count:</p><button onClick='javascript:logout()'>Logout</button>";
 	}
 }
 
