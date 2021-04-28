@@ -127,13 +127,23 @@
 
 <div id = "login" class = "page" style = "display:none">
    <h1>Login</h1>
-   <form id= "login" @submit.prevent="record">
-       <input id= "username" type="text" required="required" name="username" class="input" v-model="username" placeholder="Username">
-	<br>
-       <input id= "password" type="password" required="required" name="password" class="input" v-model="password" placeholder="Password">
-	<br>
-       <button type="submit" class="submit">login</button>
-   </form>
+   <body>
+        <form class="mui-input-group"  action="login.php" method="post">
+	        <div class="mui-input-row">
+	            <label class="account_pass">Account</label>
+	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name">
+	        </div>
+	        
+	        <div class="mui-input-row">
+	            <label class="account_pass">Password</label>
+	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW">
+	        </div>
+	        
+	        <p align="center">
+		    <button type="submit" class="mui-btn">Login</button>
+		    </P>
+	</form>
+    </body>
 </div>
 
 <div id = "register" class = "page" style = "display:none">
