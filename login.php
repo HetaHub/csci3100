@@ -9,6 +9,16 @@ $sql="select * from users where UserName='$username' AND Password='$password'";
 
 $result=mysqli_query($link,$sql);
 if($result->num_rows!=0){
+	$cookie_name = "username";
+	$cookie_value = "$username";
+	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+	$result -> free_result();
+	$sql_ts = "SELECT * FROM user WHERE UserName='$username'";
+	$result = $link->query($sql_ts);
+	$row = $result->fetch_assoc();
+	setcookie("totalscore", $row["TotalScore"], time() + (86400 * 30), "/"); // 86400 = 1 day
+	setcookie("maxscore", $row["MaxScore"], time() + (86400 * 30), "/"); // 86400 = 1 day
+	setcookie("playcount", $row["PlayCount"], time() + (86400 * 30), "/"); // 86400 = 1 day
 	echo 'Login in sucess';
 }else{
 	echo 'Wrong username or password!';
