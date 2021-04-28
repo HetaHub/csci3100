@@ -73,6 +73,9 @@ function accountInfo() {
 }
 
 function logout() {
-	document.cookie = "username=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+	document.cookie = "username=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	document.cookie = "totalscore=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	document.cookie = "maxscore=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	document.cookie = "playcount=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 	accountInfo();
 }
