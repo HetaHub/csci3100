@@ -129,19 +129,20 @@
    <h1>Login</h1>
    <body>
         <form class="mui-input-group"  action="login.php" method="post">
-	        <div class="mui-input-row">
-	            <label class="account_pass">Account</label>
+	         <p>
+			<div class="mui-input-row">
+	            <label class="account_pass">UserName:</label>
+				<br>
 	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name">
 	        </div>
-	        
+			</p>
+	        <p></P>
+			<p>
 	        <div class="mui-input-row">
-	            <label class="account_pass">Password</label>
+	            <label class="account_pass">Password:</label><br>
 	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW">
-	        </div>
-	        
-	        <p align="center">
 		    <button type="submit" class="mui-btn">Login</button>
-		    </P>
+	        </div></p>
 	</form>
     </body>
 </div>
@@ -150,24 +151,26 @@
     <h1>Registration</h1>
     <body>
         <form class="mui-input-group"  action="reg.php" method="post">
-	        <div class="mui-input-row">
-	            <label class="account_pass">Account</label>
+	        <p>
+			<div class="mui-input-row">
+	            <label class="account_pass">Enter your UserName:</label><br>
 	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name">
 	        </div>
-	        
+			</p>
+	        <p></P>
+			<p>
 	        <div class="mui-input-row">
-	            <label class="account_pass">Password</label>
+	            <label class="account_pass">Set your Password:</label><br>
 	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW">
 	        </div>
-			
+			</p>
+	        <p></P>
+			<p>
 			<div class="mui-input-row">
-	            <label class="account_pass">Re-Password</label>
+	            <label class="account_pass">Enter your Password again:</label><br>
 	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter PW Again">
-	        </div>
-	        
-	        <p align="center">
 		    <button type="submit" class="mui-btn">Register</button>
-		    </P>
+	        </div></p>
 	</form>
     </body>
 </div>
