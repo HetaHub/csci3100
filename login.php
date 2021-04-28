@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "goodm", "goodest", 'test') 
+$link = mysqli_connect("localhost", "root", "", 'users') 
 		or die ('connect fault' . mysqli_error());
 
 $username=$_POST['username'];
@@ -13,7 +13,7 @@ if($result->num_rows!=0){
 	$cookie_value = "$username";
 	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 	$result -> free_result();
-	$sql_ts = "SELECT * FROM user WHERE UserName='$username'";
+	$sql_ts = "SELECT * FROM users WHERE UserName='$username'";
 	$result = $link->query($sql_ts);
 	$row = $result->fetch_assoc();
 	setcookie("totalscore", $row["TotalScore"], time() + (86400 * 30), "/"); // 86400 = 1 day
