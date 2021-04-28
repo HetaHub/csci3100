@@ -181,6 +181,7 @@
 	
 	    <table>
 	    <tr>
+		<th>Rank</th>
 	    <th>Username</th>
 	    <th>Score</th>
 	    </tr>
@@ -189,16 +190,18 @@
 		    if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		    }
-		    $sql = "SELECT * FROM users ORDER BY TotalScore ASC LIMIT 10";
+		    $sql = "SELECT * FROM users where TotalScore IS NOT NULL ORDER BY TotalScore DESC LIMIT 10";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
+				$rank = 1;
 			    while($row = $result->fetch_assoc()) {
-			    	echo "<tr><td>" . $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
+					echo "<tr><td>". $rank++  . "</td><td>". $row["UserName"] . "</td><td>". $row["TotalScore"]. "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
 		    $conn->close();
 	    ?>
+		<p></p>
 	    </table>
 	
 </div>
@@ -208,6 +211,7 @@
 	
 	    <table>
 	    <tr>
+		<th>Rank</th>
 	    <th>Username</th>
 	    <th>Score</th>
 	    </tr>
@@ -217,17 +221,19 @@
 			die("Connection failed: " . $conn->connect_error);
 		    }
 		    
-		    $sql = "SELECT * FROM users ORDER BY MaxScore ASC LIMIT 10";
+		    $sql = "SELECT * FROM users where MaxScore IS NOT NULL ORDER BY MaxScore DESC LIMIT 10";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
+				$rank = 1;
 			    while($row = $result->fetch_assoc()) {
-			    	echo "<tr><td>" . $row["UserName"] . "</td><td>". $row["MaxScore"]. "</td></tr>";
+					echo "<tr><td>". $rank++  . "</td><td>". $row["UserName"] . "</td><td>". $row["MaxScore"]. "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
 		    $conn->close();
 	    ?>
 	    </table>
+		<p></p>
 	
 </div>
 			
@@ -236,6 +242,7 @@
 	
 	    <table>
 	    <tr>
+		<th>Rank</th>
 	    <th>Username</th>
 	    <th>Score</th>
 	    </tr>
@@ -245,17 +252,19 @@
 		    if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		    }
-		    $sql = "SELECT * FROM users ORDER BY PlayCount ASC LIMIT 10";
+		    $sql = "SELECT * FROM users where PlayCount IS NOT NULL ORDER BY PlayCount DESC LIMIT 10";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
+				$rank = 1;
 			    while($row = $result->fetch_assoc()) {
-				echo "<tr><td>" . $row["UserName"] . "</td><td>". $row["PlayCount"]. "</td></tr>";
+				echo "<tr><td>". $rank++ . "</td><td>". $row["UserName"] . "</td><td>". $row["PlayCount"]. "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
 		    $conn->close();
 	    ?>
 	    </table>
+		<p></p>
 	
 </div>
 
