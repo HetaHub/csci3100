@@ -2,8 +2,6 @@
 $link = mysqli_connect("localhost", "root", "", 'users') 
 		or die ('connect fault' . mysqli_error());
 
-mysqli_set_charset($link,'utf8');
-
 $username=$_POST['username'];
 $password=$_POST['password'];
  
