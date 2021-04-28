@@ -139,16 +139,27 @@
 <div id = "register" class = "page" style = "display:none">
     <h1>Registration</h1>
     <body>
-        <form id= "register" @submit.prevent="processForm">
-            <input name="username" type="text" required="required" class="input" id= "username" placeholder="Username" v-model="username">
-            <br>
-            <input name="password" type="password" required="required" class="input" id= "password" placeholder="Password" v-model="password">
-            <br>
-            <input name="repassword" type="password" required="required" class="input" id= "repassword" placeholder="Confirm Password" v-model="repassword">
-            <br>
-            <button type="submit" class="submit">Register</button>
-        </form>
-	</body>
+        <form class="mui-input-group"  action="reg.php" method="post">
+	        <div class="mui-input-row">
+	            <label class="account_pass">Account</label>
+	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name">
+	        </div>
+	        
+	        <div class="mui-input-row">
+	            <label class="account_pass">Password</label>
+	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW">
+	        </div>
+			
+			<div class="mui-input-row">
+	            <label class="account_pass">Re-Password</label>
+	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter PW Again">
+	        </div>
+	        
+	        <p align="center">
+		    <button type="submit" class="mui-btn">Register</button>
+		    </P>
+	</form>
+    </body>
 </div>
 
 <div id = "account" class = "page" style = "display:none">
