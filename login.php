@@ -1,11 +1,11 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", 'users') 
+$link = mysqli_connect("localhost", "goodm", "goodest", 'test') 
 		or die ('connect fault' . mysqli_error());
 
 $username=$_POST['username'];
 $password=$_POST['password'];
  
-$sql="select * from users where UserName='$username' AND Password='$password'";
+$sql="select * from user where UserName='$username' AND Password='$password'";
 
 $result=mysqli_query($link,$sql);
 if($result->num_rows!=0){
