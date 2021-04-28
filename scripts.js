@@ -60,12 +60,15 @@ function getCookie(cname) {
 }
 
 function accountInfo() {
-	var accountCookie = getCookie("username");
-	if (accountCookie == "") {
+	var usernameCookie = getCookie("username");
+	var totalscoreCookie = getCookie("totalscore");
+	var maxscoreCookie = getCookie("maxscore");
+	var playcountCookie = getCookie("playcount");
+	if (usernameCookie == "") {
 		document.getElementById("account").innerHTML = "Currently not logged in";
 	}
 	else {
-		document.getElementById("account").innerHTML = "<h1>Account Info</h1><p>Username: " + accountCookie + "<br>Total Score:<br>Max Score:<br>Play Count:</p><button onClick='javascript:logout()'>Logout</button>";
+		document.getElementById("account").innerHTML = "<h1>Account Info</h1><p>Username: " + usernameCookie + "<br>Total Score: " + totalscoreCookie + "<br>Max Score: " + maxscoreCookie + "<br>Play Count: " + playcountCookie + "</p><button onClick='javascript:logout()'>Logout</button>";
 	}
 }
 
