@@ -149,11 +149,12 @@
     </body>
 </div>
 
-<!-- account info page, contents replaced by script.js -->
+<!-- account info page, contents replaced by scripts.js -->
 <div id = "account" class = "page" style = "display:none">
 	<h1>Account Info</h1>
 </div>
 
+<!-- leaderboard page -->
 <div id = "leaderboard1" class = "page" style = "display:none">
 	<h1>Leaderboard</h1>
 	
@@ -183,7 +184,8 @@
 	    </table>
 	
 </div>
-			
+
+<!-- leaderboard page -->
 <div id = "leaderboard2" class = "page" style = "display:none">
 	<h1>Leaderboard</h1>
 	
@@ -214,7 +216,8 @@
 		<p></p>
 	
 </div>
-			
+
+<!-- leaderboard page -->
 <div id = "leaderboard3" class = "page" style = "display:none">
 	<h1>Leaderboard</h1>
 	
@@ -246,6 +249,7 @@
 	
 </div>
 
+<!-- comments page -->
 <div id = "comments" class = "page" style = "display:none">
 	<h1>Comments</h1>
     <body>
