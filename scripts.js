@@ -1,3 +1,4 @@
+// Swapping navigation bar
 function activateBar(id) {
 	var x = Array(3); 
 	x[0] = document.getElementById("accountBar")
@@ -21,6 +22,7 @@ function activateBar(id) {
 	}
 }
 
+// Change the current main page
 function gotoPage(name) {
 	pages = document.getElementsByClassName("page");
 	for (i = 0; i < pages.length; i++) {
@@ -30,6 +32,7 @@ function gotoPage(name) {
 	accountInfo();
 }
 
+// function for getting cookie with name "cname"
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -46,6 +49,7 @@ function getCookie(cname) {
   return "";
 }
 
+// show account info in info page
 function accountInfo() {
 	var usernameCookie = getCookie("username");
 	var totalscoreCookie = getCookie("totalscore");
@@ -59,6 +63,7 @@ function accountInfo() {
 	}
 }
 
+// clear the cookies for user when they logout
 function logout() {
 	document.cookie = "username=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 	document.cookie = "totalscore=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
