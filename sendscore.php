@@ -26,7 +26,7 @@ if ($score_this>$row["MaxScore"]){
 }
 
 if ($conn->query($sql) === TRUE && $conn->query($sql_c) === TRUE) {
-  echo "$score & $sssss & $username";
+  echo "The total score of Player $username is $score.";
 } else {
   echo "<script type='text/javascript'>alert('Error updating record: ' . $conn->error);</script>";
 }
