@@ -34,17 +34,6 @@
 	</ul>
 </nav>
 
-<!--
-<div id = "gameBar" style = "display:none">
-<nav class = "navbar navbar-expand navbar-dark mb-3" style = "background-color:rgb(32,32,32)">
-	<ul class = "navbar-nav">
-		<li class = "nav-item"><a href = "javascript:gotoPage('game')" class = "nav-link">Game</a></li>
-		<li class = "nav-item"><a href = "javascript:gotoPage('options')" class = "nav-link">Options</a></li>
-	</ul>
-</nav>
-</div>
--->
-
 <div id = "accountBar" style = "display:none">
 <nav class = "navbar navbar-expand navbar-dark mb-3" style = "background-color:rgb(32,32,32)">
 	<ul class = "navbar-nav">
@@ -102,28 +91,6 @@
   </div>
 	<script src="script.js" type="text/javascript"></script>
 </div>
-
-<!--
-<div id = "options" class = "page" style = "display:none">
-	<h1>Options</h1>
-	
-	<label for="difficulty">Choose a difficulty:</label>
-	<select name="difficulty" id="difficulty">
-		<option value="easy">easy</option>
-		<option value="normal">normal</option>
-		<option value="hard">hard</option>
-		<option value="insane">insane</option>
-	</select>
-	<br>
-	
-	<label for="mode">Choose a mode:</label>
-	<select name="mode" id="mode">
-		<option value="classic">Classic</option>
-		<option value="time">Time Trial</option>
-		<option value="zen">Zen</option>
-	</select>
-</div>
--->
 
 <div id = "login" class = "page" style = "display:none">
    <h1>Login</h1>
