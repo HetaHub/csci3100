@@ -154,7 +154,7 @@
 	<h1>Account Info</h1>
 </div>
 
-<!-- leaderboard page -->
+<!-- leaderboard page for Total Score-->
 <div id = "leaderboard1" class = "page" style = "display:none">
 	<h1>Leaderboard</h1>
 	
@@ -185,7 +185,7 @@
 	
 </div>
 
-<!-- leaderboard page -->
+<!-- leaderboard page for Max Score-->
 <div id = "leaderboard2" class = "page" style = "display:none">
 	<h1>Leaderboard</h1>
 	
@@ -217,7 +217,7 @@
 	
 </div>
 
-<!-- leaderboard page -->
+<!-- leaderboard page for Play Count-->
 <div id = "leaderboard3" class = "page" style = "display:none">
 	<h1>Leaderboard</h1>
 	
