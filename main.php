@@ -25,6 +25,7 @@
 	<h1>CUHK Card Matching Game</h1>
 </header>
 
+<!-- main navigation bar -->
 <nav class = "navbar navbar-expand navbar-dark bg-dark mb-3">
 	<ul class = "navbar-nav">
 		<li class = "nav-item"><a href = "javascript:gotoPage('game')" class = "nav-link" id = "gameBarButton">Game</a></li>
@@ -34,6 +35,7 @@
 	</ul>
 </nav>
 
+<!-- secondary navigation bar for account related items -->
 <div id = "accountBar" style = "display:none">
 <nav class = "navbar navbar-expand navbar-dark mb-3" style = "background-color:rgb(32,32,32)">
 	<ul class = "navbar-nav">
@@ -44,6 +46,7 @@
 </nav>
 </div>
 
+<!-- secondary navigation bar for leaderboard related items -->
 <div id = "leaderboardBar" style = "display:none">
 <nav class = "navbar navbar-expand navbar-dark mb-3" style = "background-color:rgb(32,32,32)">
 	<ul class = "navbar-nav">
@@ -54,11 +57,13 @@
 </nav>
 </div>
 
+<!-- empty navigation bar for when the secondary navigation bar is not opened -->
 <div id = "emptyBar" style = "display:block">
 <nav class = "navbar navbar-expand navbar-dark mb-3" style = "background-color:rgb(32,32,32)">
 </nav>
 </div>
 
+<!-- main game page -->
 <div id = "game" class = "page" style = "display:block">
   <div id="app" class="container">
     <div class="header">
@@ -92,6 +97,7 @@
 	<script src="script.js" type="text/javascript"></script>
 </div>
 
+<!-- login page -->
 <div id = "login" class = "page" style = "display:none">
    <h1>Login</h1>
    <body>
@@ -114,6 +120,7 @@
     </body>
 </div>
 
+<!-- register page -->
 <div id = "register" class = "page" style = "display:none">
     <h1>Registration</h1>
     <body>
@@ -142,6 +149,7 @@
     </body>
 </div>
 
+<!-- account info page, contents replaced by script.js -->
 <div id = "account" class = "page" style = "display:none">
 	<h1>Account Info</h1>
 </div>
