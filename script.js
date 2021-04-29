@@ -104,7 +104,7 @@ var CardTypes = [
 		  var usernameCookie = getCookie("username");
 		  if (usernameCookie == "") {
 		     alert('Currently not logged in. Please log in first.');
-	      }
+	      	  }
 		  else {
 				$.ajax({
 				  url: 'sendscore.php',
@@ -112,13 +112,14 @@ var CardTypes = [
 				  data: 'score='+sss+'&username='+usernameCookie,
 				  success: function(output) 
 				  {
-					  alert('success, server says '+output);
+					  alert('Submission successful! '+output);
 				  }, error: function()
 				  {
-					  alert('something went wrong, rating failed');
+					  alert('Something went wrong! Submission failed.');
 				  }
 			   });
 		  }
+		  this.resetGame();
       },
   
       closeModal: function closeModal() {
