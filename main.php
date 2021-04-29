@@ -15,7 +15,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.12.0/lodash.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
-	<style>table, th, td {border: 1px solid white; border-collapse: collapse;}th, td { padding: 5px;  text-align: center;}</style>
+	<style>table, th, td {border: 1px solid white; border-collapse: collapse;}th, td { padding: 5px;  text-align: left;}</style>
 </head>
 
 <body style = "background-color:black; color:white; font-family: 'Shippori Mincho', serif" onload = "javascript:accountInfo()">
@@ -253,37 +253,32 @@
 <div id = "comments" class = "page" style = "display:none">
 	<h1>Comments</h1>
     <body>
-        <form id= "comment" @submit.prevent="processForm">
-            <textarea rows="4" cols="50" name="comment" required="required" form="comment" v-model="comment" placeholder="Comment here...">
-            </textarea>	<br>
-            <button type="submit" class="submit">submit</button>
-        </form>
-	    
+        <form method="post" action="comment.php">
+			<textarea id="comment" name="comment"></textarea>
+			<input type="submit" name="submit" value="Send" id="submit"/>
+		</form>
+		<p></p>
 	    <table>
 	    <tr>
 	    <th>Recent Comments</th>
 
 		</tr>
-<!--
-	    <?php
-		    $conn = mysqli_connect("localhost", "root", "", "COMMENT");
+		<?php
+		    $conn = mysqli_connect("localhost", "root", "", 'users');
+		    if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		    }
 		    
-		    if ($mysqli -> connect_errno) {
-			  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-			  exit();
-			}
-		    
-		    $sql = "SELECT TOP 10 * FROM COMMENT";
+		    $sql = "SELECT * FROM comment where comment IS NOT NULL LIMIT 20";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
-				echo "</td><td>". $row["com"]. "</td></tr>";
+					echo "<tr><td>". $row["comment"] . "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
 		    $conn->close();
 	    ?>
--->
 	    </table>
     </body>
 </div>
