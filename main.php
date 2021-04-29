@@ -106,14 +106,14 @@
 			<div class="mui-input-row">
 	            <label class="account_pass">UserName:</label>
 				<br>
-	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name">
+	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name" required>
 	        </div>
 			</p>
 	        <p></P>
 			<p>
 	        <div class="mui-input-row">
 	            <label class="account_pass">Password:</label><br>
-	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW">
+	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW" required>
 		    <button type="submit" class="mui-btn">Login</button>
 	        </div></p>
 	</form>
@@ -128,21 +128,21 @@
 	        <p>
 			<div class="mui-input-row">
 	            <label class="account_pass">Enter your UserName:</label><br>
-	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name">
+	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name" required>
 	        </div>
 			</p>
 	        <p></P>
 			<p>
 	        <div class="mui-input-row">
 	            <label class="account_pass">Set your Password:</label><br>
-	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW">
+	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW" required>
 	        </div>
 			</p>
 	        <p></P>
 			<p>
 			<div class="mui-input-row">
 	            <label class="account_pass">Enter your Password again:</label><br>
-	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter PW Again">
+	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter PW Again" required>
 		    <button type="submit" class="mui-btn">Register</button>
 	        </div></p>
 	</form>
@@ -254,7 +254,7 @@
 	<h1>Comments</h1>
     <body>
         <form method="post" action="comment.php">
-			<textarea id="comment" name="comment"></textarea>
+			<textarea id="comment" name="comment" required></textarea>
 			<input type="submit" name="submit" value="Send" id="submit"/>
 		</form>
 		<p></p>
