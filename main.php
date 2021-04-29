@@ -264,16 +264,16 @@
 
 		</tr>
 		<?php
-		    $conn = mysqli_connect("localhost", "root", "", 'users');
+		    $conn = mysqli_connect("localhost", "root", "", 'comments');
 		    if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		    }
 		    
-		    $sql = "SELECT * FROM comment where comment IS NOT NULL LIMIT 20";
+		    $sql = "SELECT * FROM comments where comments IS NOT NULL LIMIT 20";
 		    $result = $conn->query($sql);
 		    if ($result->num_rows > 0) {
 			    while($row = $result->fetch_assoc()) {
-					echo "<tr><td>". $row["comment"] . "</td></tr>";
+					echo "<tr><td>". $row["comments"] . "</td></tr>";
 			    }
 			    echo "</table>";
 		    } else { echo "0 results"; }
