@@ -81,7 +81,7 @@
       <div class="overlay"></div>
       <div class="content">
         <div class="title">Score: {{ score }}</div>
-        <button @click="resetGame()">Play again!</button>
+        <button @click="resetGame()">Play again!</button><button @Click="send()">Submit</button>
       </div>
     </div>
     <div id="info" class="splash hidden">
