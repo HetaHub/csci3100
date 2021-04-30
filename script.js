@@ -1,3 +1,4 @@
+//variables for the cards
 var CardTypes = [
     {
       name: "Science Laboratory Building",
@@ -61,6 +62,7 @@ var CardTypes = [
     }
   ];
   
+  //For shuffling cards
   var shuffleCards = function shuffleCards() {
 	var cards;
     cards = [].concat(_.cloneDeep(CardTypes));
@@ -83,6 +85,7 @@ var CardTypes = [
     },
   
     methods: {
+      //Function for resetting the game
       resetGame: function resetGame() {
         this.showSplash = false;
         var cards = shuffleCards();
@@ -99,6 +102,7 @@ var CardTypes = [
         this.cards = cards;
       },
 	    
+      //Function for sending the score of the single game attempt, by calling sendscore.php, if the user has logged in.
       send: function(){
 		  var sss=this.score;
 		  var usernameCookie = getCookie("username");
@@ -119,21 +123,26 @@ var CardTypes = [
 				  }
 			   });
 		  }
+	          //Reset the game as well to prevent multiple submission.
 		  this.resetGame();
       },
-  
+      
+      //Cover the card
       closeModal: function closeModal() {
         $("#info").fadeOut("fast");
       },
   
+      //Show the card
       showModal: function showModal() {
         $("#info").fadeIn("slow");
       },
-  
+
+      //Check whether the card is flipped
       flippedCards: function flippedCards() {
         return _.filter(this.cards, function (card) { return card.flipped; });
       },
   
+      //Check if the flipped cards are the same
       sameFlippedCard: function sameFlippedCard() {
         var flippedCards = this.flippedCards();
         if (flippedCards.length == 2) {
@@ -142,6 +151,7 @@ var CardTypes = [
         }
       },
   
+      //Set card founds
       setCardFounds: function setCardFounds() {
         _.each(this.cards, function (card) {
           if (card.flipped)
@@ -149,12 +159,14 @@ var CardTypes = [
         });
       },
   
+      //Check if all cards are found
       checkAllFound: function checkAllFound() {
         var foundCards = _.filter(this.cards, function (card) { return card.found; });
         if (foundCards.length == this.cards.length)
           return true;
       },
   
+      //Start the game
       startGame: function startGame() {
         var _this = this;
         this.started = true;
@@ -166,12 +178,14 @@ var CardTypes = [
         }, 1000);
       },
   
+      //Update the score
       updateScore: function updateScore() {
         var elapsedTime = moment().diff(this.startTime, 'seconds')
         var score = 2000 - elapsedTime * 5 - this.turns * 20
         this.score = Math.max(score, 0)
       },
   
+      //Finishing the game
       finishGame: function finishGame() {
         this.started = false;
         clearInterval(this.timer);
@@ -179,6 +193,7 @@ var CardTypes = [
         this.showSplash = true;
       },
   
+      //Flip card
       flipCard: function flipCard(card) {
         this.updateScore();
         var _this2 = this;
@@ -219,10 +234,12 @@ var CardTypes = [
           }
       },
   
+      //Clear flips
       clearFlips: function clearFlips() {
         _.map(this.cards, function (card) { return card.flipped = false; });
       },
   
+      //Clear flip back timer
       clearFlipBackTimer: function clearFlipBackTimer() {
         clearTimeout(this.flipBackTimer);
         this.flipBackTimer = null;
