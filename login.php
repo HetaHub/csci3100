@@ -1,14 +1,17 @@
 <?php
+//Connect to database comments and report if cannot connect to database
 $link = mysqli_connect("localhost", "root", "", 'users') 
 		or die ('connect fault' . mysqli_error());
 
+//Get the input username and password
 $username=$_POST['username'];
 $password=$_POST['password'];
- 
-$sql="select * from users where UserName='$username' AND Password='$password'";
 
+//Select and check the input username and password with the database and return whether it is success or not.
+$sql="select * from users where UserName='$username' AND Password='$password'";
 $result=mysqli_query($link,$sql);
 if($result->num_rows!=0){
+	//if success, add the data to cookies
 	$cookie_name = "username";
 	$cookie_value = "$username";
 	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -23,7 +26,10 @@ if($result->num_rows!=0){
 }else{
 	echo 'Wrong username or password!';
 }
+
+//Close the database connection
 mysqli_close($link);
+//Button for returning to the previous page
 $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
 echo "<br><a href='$url'>Press here to Go Back</a>"; 
 ?>
