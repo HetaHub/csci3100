@@ -106,14 +106,14 @@
 			<div class="mui-input-row">
 	            <label class="account_pass">UserName:</label>
 				<br>
-	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name" required>
+	            <input type="text" name="username" class="mui-input-clear" size="22" placeholder="Your User Name" required>
 	        </div>
 			</p>
 	        <p></P>
 			<p>
 	        <div class="mui-input-row">
 	            <label class="account_pass">Password:</label><br>
-	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW" required>
+	            <input type="password" name="password" class="mui-input-clear" size="22" placeholder="Enter your password here" required>
 		    <button type="submit" class="mui-btn">Login</button>
 	        </div></p>
 	</form>
