@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-$sql_check="select * from user where UserName='$username'";
+$sql_check="select * from users where UserName='$username'";
 
 $result=mysqli_query($conn,$sql_check);
 if($result->num_rows!=0){
