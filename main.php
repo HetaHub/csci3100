@@ -128,21 +128,21 @@
 	        <p>
 			<div class="mui-input-row">
 	            <label class="account_pass">Enter your UserName:</label><br>
-	            <input type="text" name="username" class="mui-input-clear" placeholder="User Name" required>
+	            <input type="text" name="username" class="mui-input-clear" placeholder="Maximum 20 characters" size="22" maxlength="20" required>
 	        </div>
 			</p>
 	        <p></P>
 			<p>
 	        <div class="mui-input-row">
 	            <label class="account_pass">Set your Password:</label><br>
-	            <input type="password" name="password" class="mui-input-clear" placeholder="Enter PW" required>
+	            <input type="password" name="password" class="mui-input-clear" placeholder="Length of PW within 3-20" size="22" maxlength="20" minlength="3" required>
 	        </div>
 			</p>
 	        <p></P>
 			<p>
 			<div class="mui-input-row">
 	            <label class="account_pass">Enter your Password again:</label><br>
-	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter PW Again" required>
+	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter your PW Again" size="22" maxlength="20" minlength="3" required>
 		    <button type="submit" class="mui-btn">Register</button>
 	        </div></p>
 	</form>
@@ -254,7 +254,7 @@
 	<h1>Comments</h1>
     <body>
         <form method="post" action="comment.php">
-			<textarea id="comment" name="comment" required></textarea>
+			<textarea id="comment" name="comment" maxlength="250" rows="5" cols="50" required></textarea>
 			<input type="submit" name="submit" value="Send" id="submit"/>
 		</form>
 		<p></p>
