@@ -19,7 +19,7 @@ if($result->num_rows!=0){
 	setcookie("totalscore", $row["TotalScore"], time() + (86400 * 30), "/"); // 86400 = 1 day
 	setcookie("maxscore", $row["MaxScore"], time() + (86400 * 30), "/"); // 86400 = 1 day
 	setcookie("playcount", $row["PlayCount"], time() + (86400 * 30), "/"); // 86400 = 1 day
-	echo 'Login sucess';
+	echo 'Login success';
 }else{
 	echo 'Wrong username or password!';
 }
