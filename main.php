@@ -279,7 +279,7 @@
 		    } else { echo "0 results"; }
 		    $conn->close();
 	    ?>
-	    </table>
+	    </table><p></p>
     </body>
 </div>
 
