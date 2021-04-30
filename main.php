@@ -81,9 +81,11 @@
       <div class="overlay"></div>
       <div class="content">
         <div class="title">Score: {{ score }}</div>
+	<!-- A button for starting a new game without submitting the score. Another button is for submitting the score and starting a new game. -->
         <button @click="resetGame()">Play again!</button><button @Click="send()">Submit</button>
       </div>
     </div>
+    <!-- This splash is not used -->
     <div id="info" class="splash hidden">
       <div class="overlay"></div>
       <div class="content">
@@ -101,21 +103,24 @@
 <div id = "login" class = "page" style = "display:none">
    <h1>Login</h1>
    <body>
+	<!-- Form for login. Calling login.php with the input data when the login button is pressed -->
         <form class="mui-input-group"  action="login.php" method="post">
 	         <p>
-			<div class="mui-input-row">
-	            <label class="account_pass">UserName:</label>
-				<br>
+		<div class="mui-input-row">
+	            <label class="account_pass">UserName:</label><br>
+		    <!-- Max input size is 22 -->
 	            <input type="text" name="username" class="mui-input-clear" size="22" placeholder="Your User Name" required>
 	        </div>
-			</p>
+		</p>
 	        <p></P>
-			<p>
+		<p>
 	        <div class="mui-input-row">
 	            <label class="account_pass">Password:</label><br>
+		    <!-- Max input size is 22. -->
 	            <input type="password" name="password" class="mui-input-clear" size="22" placeholder="Enter your password here" required>
 		    <button type="submit" class="mui-btn">Login</button>
-	        </div></p>
+	        </div>
+		</p>
 	</form>
     </body>
 </div>
@@ -124,17 +129,20 @@
 <div id = "register" class = "page" style = "display:none">
     <h1>Registration</h1>
     <body>
+	<!-- Form for reg. Calling reg.php with the input data when the register button is pressed -->
         <form class="mui-input-group"  action="reg.php" method="post">
 	        <p>
-			<div class="mui-input-row">
+		<div class="mui-input-row">
 	            <label class="account_pass">Enter your UserName:</label><br>
+		    <!-- Max input size is 22. -->
 	            <input type="text" name="username" class="mui-input-clear" placeholder="Maximum 20 characters" size="22" maxlength="20" required>
 	        </div>
-			</p>
+		</p>
 	        <p></P>
-			<p>
+		<p>
 	        <div class="mui-input-row">
 	            <label class="account_pass">Set your Password:</label><br>
+		    <!-- Min input size is 3. Max input size is 22. -->
 	            <input type="password" name="password" class="mui-input-clear" placeholder="Length of PW within 3-20" size="22" maxlength="20" minlength="3" required>
 	        </div>
 			</p>
@@ -142,6 +150,7 @@
 			<p>
 			<div class="mui-input-row">
 	            <label class="account_pass">Enter your Password again:</label><br>
+		    <!-- Min input size is 3. Max input size is 22. -->
 	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="Enter your PW Again" size="22" maxlength="20" minlength="3" required>
 		    <button type="submit" class="mui-btn">Register</button>
 	        </div></p>
@@ -164,6 +173,7 @@
 	    <th>Username</th>
 	    <th>Score</th>
 	    </tr>
+	    <!-- php code for accessing the datebase. Display the Top 10 total score in descending order -->
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", 'users');
 		    if ($conn->connect_error) {
@@ -195,6 +205,7 @@
 	    <th>Username</th>
 	    <th>Score</th>
 	    </tr>
+	    <!-- php code for accessing the datebase. Display the Top 10 max score in descending order -->
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", 'users');
 		    if ($conn->connect_error) {
@@ -227,6 +238,7 @@
 	    <th>Username</th>
 	    <th>Score</th>
 	    </tr>
+	    <!-- php code for accessing the datebase. Display the Top 10 play count in descending order -->
 	    <?php
 		    $conn = mysqli_connect("localhost", "root", "", 'users');
 
@@ -253,6 +265,7 @@
 <div id = "comments" class = "page" style = "display:none">
 	<h1>Comments</h1>
     <body>
+	<!-- Collect the comment. Calling login.php with the input data when the send button is pressed -->
         <form method="post" action="comment.php">
 			<textarea id="comment" name="comment" maxlength="250" rows="5" cols="50" required></textarea>
 			<input type="submit" name="submit" value="Send" id="submit"/>
@@ -263,6 +276,7 @@
 	    <th>Recent Comments</th>
 
 		</tr>
+		<!-- php code for accessing the datebase. Display 10 comments -->
 		<?php
 		    $conn = mysqli_connect("localhost", "root", "", 'comments');
 		    if ($conn->connect_error) {
